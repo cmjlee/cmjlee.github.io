@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        
+        <title>Dental Form</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="index.js"></script>
+
+        <!-- tempus dominus -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+
+	</head>
+	<body>
+        <!-- <h3>Dental Form</h3> -->
+            <div class="container-fluid">
+               <!-- Form code begins -->
+               <form id='form'>
+                    <!-- brief operation note row -->
+                    <h4>Brief Operation Note Extraction</h4>
+                    <div class="form-row">
+                        <!-- Left column of top row -->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="date">Date of Operation</label>
+                                <div class="form-group input-group date" id="datetimepicker4" data-target-input="nearest">
+                                    <input type="text" id="date" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="time">Time of Operation</label>
+                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                    <input type="text" id="time" class="form-control datetimepicker-input" data-target="#datetimepicker3"/>
+                                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preOpDiagnosis">Pre-Op Diagnosis</label>
+                                <input type="text" class="form-control" id="preOpDiagnosis">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="postOpDiagnosis">Post-Op Diagnosis</label>
+                                <input type="text" class="form-control" id="postOpDiagnosis">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="resident">Resident</label>
+                                <input name="resident" type="text" class="form-control" list="residentList" id="resident">
+                                <datalist id="residentList">
+                                    <!-- options are added in index.js -->
+                                </datalist>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="staff">Staff</label>
+                                <input name="staff" type="text" class="form-control" list="staffList" id="staff">
+                                <datalist id="staffList">
+                                    <!-- options are added in index.js -->
+                                </datalist>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="anesthesia">Anesthesia</label>
+                                <input name="anesthesia" type="text" class="form-control" list="anesthesiaList" id="anesthesia">
+                                <datalist id="anesthesiaList">
+                                    <!-- options are added in index.js -->
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <!-- Right column of top row -->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="procedure">Procedure</label>
+                                <input name="procedure" type="text" class="form-control" list="procedureList" id="procedure">
+                                <datalist id="procedureList">
+                                    <!-- options are added in index.js -->
+                                </datalist>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ivf">IVF</label>
+                                <input type="text" class="form-control" id="ivf">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bloodLoss">Blood Loss</label>
+                                <input type="text" class="form-control" id="bloodLoss" value="minimal">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="urineOutput">Urine Output</label>
+                                <input type="text" class="form-control" id="urine" value="none">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="drains">Drains</label>
+                                <input type="text" class="form-control" id="drain" value="none">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="specimens">Specimens</label>
+                                <input type="text" class="form-control" id="specimen" value="none">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="complication">Complications</label>
+                                <input name="complication" type="text" class="form-control" list="complicationList" id="complication">
+                                <datalist id="complicationList">
+                                    <!-- options are added in index.js -->
+                                </datalist>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second row (description of operation) -->
+                    <h4>Description of Operation</h4>
+                    <div class="form-row form-group" id="row2">
+
+                        <div class="form-group">
+                            <label>RBA Discussed & understood</label>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="rba" id="rbaYes" value="yes" checked>
+                                    <label class="form-check-label" for="rbaYes">
+                                    Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="rba" id="rbaNo" value="no">
+                                    <label class="form-check-label" for="rbaNo">
+                                    No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Consent signed</label>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="consentSigned" id="consentYes" value="yes" checked>
+                                    <label class="form-check-label" for="consentYes">
+                                      Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="consentSigned" id="consentNo" value="no">
+                                    <label class="form-check-label" for="consentNo">
+                                      No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Monitors</label>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="monitors" id="monitorsYes" value="yes" checked>
+                                    <label class="form-check-label" for="monitorsYes">
+                                      Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="monitors" id="monitorsNo" value="no">
+                                    <label class="form-check-label" for="monitorsNo">
+                                      No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>O2</label>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="o2" id="o2Yes" value="yes" checked>
+                                    <label class="form-check-label" for="o2Yes">
+                                      Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="o2" id="o2No" value="no">
+                                    <label class="form-check-label" for="o2No">
+                                      No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>IV</label>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="iv" id="ivYes" value="yes" checked>
+                                    <label class="form-check-label" for="ivYes">
+                                      Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="iv" id="ivNo" value="no">
+                                    <label class="form-check-label" for="ivNo">
+                                      No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="seeIVSedationCheck">
+                                <label class="form-check-label" for="seeIVSedationCheck">
+                                    See IV Sedation Form for Vitals
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <h6>Pre op Vitals</h6>
+                    <div class="form-row vitals" id="vitalsPre">
+                        <div class="form-group form-group-inline">
+                            <label for="preOpHR">HR</label>
+                            <input type="text" class="form-control" id="preOpHR">
+                        </div>
+
+                        <div class="form-group form-group-inline">
+                            <label for="preOpRR">RR</label>
+                            <input type="text" class="form-control" id="preOpRR">
+                        </div>
+
+                        <div class="form-group form-group-inline">
+                            <label for="preOpSaO2">SaO2 (%)</label>
+                            <input type="text" class="form-control" id="preOpSaO2">
+                        </div>
+                        <div class="form-group form-group-inline">
+                            <label for="preOpBP">BP</label>
+                            <input type="text" class="form-control" id="preOpBP">
+                        </div>
+
+                        <div class="form-group form-group-inline">
+                            <label for="preOpTemp">Temp</label>
+                            <input type="text" class="form-control" id="preOpTemp">
+                        </div>
+                    </div>
+
+                    <h6>Post op Vitals</h6>
+                    <div class="form-row vitals" id="vitalsPost">
+                        <div class="form-group form-group-inline">
+                            <label for="postOpHR">HR</label>
+                            <input type="text" class="form-control" id="postOpHR">
+                        </div>
+
+                        <div class="form-group form-group-inline">
+                            <label for="postOpRR">RR</label>
+                            <input type="text" class="form-control" id="postOpRR">
+                        </div>
+
+                        <div class="form-group form-group-inline">
+                            <label for="postOpSaO2">SaO2 (%)</label>
+                            <input type="text" class="form-control" id="postOpSaO2">
+                        </div>
+                        <div class="form-group form-group-inline">
+                            <label for="postOpBP">BP</label>
+                            <input type="text" class="form-control" id="postOpBP">
+                        </div>
+
+                    </div>
+
+                    <h6>Local: </h6>
+
+                    <div class="form-group form-inline form-row">
+                        <input type="text" id="carpLidocaine" class="form-control mx-sm-3">
+                        <label for="carpLidocaine">carp (1.7ml) Lidocaine 2% w/epi 1:100K</label>
+                    </div>
+
+                    <div class="form-group form-inline form-row">
+                        <input type="text" id="carpMarcaine" class="form-control mx-sm-3">
+                        <label for="carpMarcaine">carp (1.8ml) Marcaine 0.5% w/epi 1:200K</label>
+                    </div>
+
+                    <div class="form-group form-inline form-row">
+                        <input type="text" id="carpSeptocaine" class="form-control mx-sm-3">
+                        <label for="carpSeptocaine">carp (1.7ml) 4%Septocaine w epi 1:100K</label>
+                    </div>
+
+                    <div class="form-group form-inline form-row">
+                        <input type="text" id="carpOther" class="form-control mx-sm-3">
+                        <label for="carpOther">carp &nbsp; &nbsp; Other: </label>
+                        <input type="text" id="carpOther2" class="form-control mx-sm-3">
+                    </div>
+
+                    <!-- procedure checkbox -->
+                    <div class="form-group form-row">
+                        <legend class="col-form-label col-sm-1 pt-2" id="procedureLegend">Procedure: </legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="timeout" value="timeout">
+                            <label class="form-check-label" for="timeout">Timeout</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="throatScreen" value="throatScreen">
+                            <label class="form-check-label" for="throatScreen">Throat Screen</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="biteBlock" value="biteBlock">
+                            <label class="form-check-label" for="biteBlock">Bite Block</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="jawStabilized" value="jawStabilized">
+                            <label class="form-check-label" for="jawStabilized">Jaw stabilized for TMJ prophy</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row" id="details1">
+                            <div class="form-group form-inline pound-input">
+                                <label># &nbsp;</label>
+                                <input type="text" class="form-control col-sm-10" id="details1Input">
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="mpFlap" id="mpFlap1">
+                                    <label class="form-check-label" for="mpFlap1" >MP Flap</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="boneRemoval" id="boneRemoval1">
+                                    <label class="form-check-label" for="boneRemoval1">Bone removal/drill, NS</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="crownSection" id="crownSection1">
+                                    <label class="form-check-label" for="crownSection1">Crown Section</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="rootSection" id="rootSection1">
+                                    <label class="form-check-label" for="rootSection1">Root Section</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="manualAlveoloplasty" id="manualAlveoloplasty1">
+                                    <label class="form-check-label" for="manualAlveoloplasty1">Manual Alveoloplasty</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="elevator" id="elevator1">
+                                    <label class="form-check-label" for="elevator1">Elevator</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="forceps" id="forceps1">
+                                    <label class="form-check-label" for="forceps1">Forceps</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="follicleRem" id="follicleRem1">
+                                    <label class="form-check-label" for="follicleRem1">Follicle Rem</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="sinusExposure" id="sinusExposure1">
+                                    <label class="form-check-label" for="sinusExposure1">Sinus Exposure</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="rootTipRemoved" id="rootTipRemoved1">
+                                    <label class="form-check-label" for="rootTipRemoved1">Root tip removed</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="nerveVisualized" id="nerveVisualized1">
+                                    <label class="form-check-label" for="nerveVisualized1">Nerve visualized/intact</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="salineIrrig" id="salineIrrig1">
+                                    <label class="form-check-label" for="salineIrrig1">Saline irrig.</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="suture" id="suture1">
+                                    <label class="form-check-label" for="suture1">Suture</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="other" id="other1">
+                                    <label class="form-check-label align-middle" for="other1">Other: &nbsp; </label>
+                                    <input class="form-check-input form-control other-input" type="text">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="form-group form-row" id="details2">
+                        <div class="form-group form-inline pound-input">
+                            <label># &nbsp;</label>
+                            <input type="text" class="form-control col-sm-10" id="details2Input">
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="mpFlap" id="mpFlap2">
+                                <label class="form-check-label" for="mpFlap2">MP Flap</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="boneRemoval" id="boneRemoval2">
+                                <label class="form-check-label" for="boneRemoval2">Bone removal/drill, NS</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="crownSection" id="crownSection2">
+                                <label class="form-check-label" for="crownSection2">Crown Section</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="rootSection" id="rootSection2">
+                                <label class="form-check-label" for="rootSection2">Root Section</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="manualAlveoloplasty" id="manualAlveoloplasty2">
+                                <label class="form-check-label" for="manualAlveoloplasty2">Manual Alveoloplasty</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="elevator" id="elevator2">
+                                <label class="form-check-label" for="elevator2">Elevator</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="forceps" id="forceps2">
+                                <label class="form-check-label" for="forceps2">Forceps</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="follicleRem" id="follicleRem2">
+                                <label class="form-check-label" for="follicleRem2">Follicle Rem</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="sinusExposure" id="sinusExposure2">
+                                <label class="form-check-label" for="sinusExposure2">Sinus Exposure</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="rootTipRemoved" id="rootTipRemoved2">
+                                <label class="form-check-label" for="rootTipRemoved2">Root tip removed</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="nerveVisualized" id="nerveVisualized2">
+                                <label class="form-check-label" for="nerveVisualized2">Nerve visualized/intact</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="salineIrrig" id="salineIrrig2">
+                                <label class="form-check-label" for="salineIrrig2">Saline irrig.</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="suture" id="suture2">
+                                <label class="form-check-label" for="suture2">Suture</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="other" id="other2">
+                                <label class="form-check-label align-middle" for="other2">Other: &nbsp; </label>
+                                <input class="form-check-input form-control other-input" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row" id="details3">
+                        <div class="form-group form-inline pound-input">
+                            <label># &nbsp;</label>
+                            <input type="text" class="form-control col-sm-10" id="details3Input">
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="mpFlap" id="mpFlap3">
+                                <label class="form-check-label" for="mpFlap3">MP Flap</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="boneRemoval" id="boneRemoval3">
+                                <label class="form-check-label" for="boneRemoval3">Bone removal/drill, NS</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="crownSection" id="crownSection3">
+                                <label class="form-check-label" for="crownSection3">Crown Section</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="rootSection" id="rootSection3">
+                                <label class="form-check-label" for="rootSection3">Root Section</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="manualAlveoloplasty" id="manualAlveoloplasty3">
+                                <label class="form-check-label" for="manualAlveoloplasty3">Manual Alveoloplasty</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="elevator" id="elevator3">
+                                <label class="form-check-label" for="elevator3">Elevator</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="forceps" id="forceps3">
+                                <label class="form-check-label" for="forceps3">Forceps</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="follicleRem" id="follicleRem3">
+                                <label class="form-check-label" for="follicleRem3">Follicle Rem</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="sinusExposure" id="sinusExposure3">
+                                <label class="form-check-label" for="sinusExposure3">Sinus Exposure</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="rootTipRemoved" id="rootTipRemoved3">
+                                <label class="form-check-label" for="rootTipRemoved3">Root tip removed</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="nerveVisualized" id="nerveVisualized3">
+                                <label class="form-check-label" for="nerveVisualized3">Nerve visualized/intact</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="salineIrrig" id="salineIrrig3">
+                                <label class="form-check-label" for="salineIrrig3">Saline irrig.</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="suture" id="suture3">
+                                <label class="form-check-label" for="suture3">Suture</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="other" id="other3">
+                                <label class="form-check-label align-middle" id="other3">Other: &nbsp; </label>
+                                <input class="form-check-input form-control other-input" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row" id="details4">
+                        <div class="form-group form-inline pound-input ">
+                            <label># &nbsp;</label>
+                            <input type="text" class="form-control col-sm-10" id="details4Input">
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="mpFlap" id="mpFlap4">
+                                <label class="form-check-label" for="mpFlap4">MP Flap</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="boneRemoval" id="boneRemoval4">
+                                <label class="form-check-label" for="boneRemoval4">Bone removal/drill, NS</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="crownSection" id="crownSection4">
+                                <label class="form-check-label" for="crownSection4">Crown Section</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="rootSection" id="rootSection4">
+                                <label class="form-check-label" for="rootSection4">Root Section</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="manualAlveoloplasty" id="manualAlveoloplasty4">
+                                <label class="form-check-label" for="manualAlveoloplasty4">Manual Alveoloplasty</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="elevator" id="elevator4">
+                                <label class="form-check-label" for="elevator4">Elevator</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="forceps" id="forceps4">
+                                <label class="form-check-label" for="forceps4">Forceps</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="follicleRem" id="follicleRem4">
+                                <label class="form-check-label" for="follicleRem4">Follicle Rem</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="sinusExposure" id="sinusExposure4">
+                                <label class="form-check-label" for="sinusExposure4">Sinus Exposure</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="rootTipRemoved" id="rootTipRemoved4">
+                                <label class="form-check-label" for="rootTipRemoved4">Root tip removed</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="nerveVisualized" id="nerveVisualized4">
+                                <label class="form-check-label" for="nerveVisualized4">Nerve visualized/intact</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="salineIrrig" id="salineIrrig4">
+                                <label class="form-check-label" for="salineIrrig4">Saline irrig.</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="suture" id="suture4">
+                                <label class="form-check-label" for="suture4">Suture</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="other" id="other4">
+                                <label class="form-check-label align-middle" for="other4">Other: &nbsp; </label>
+                                <input class="form-check-input form-control other-input" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row-inline">
+                        <label for="notes">Notes</label>
+                        <input type="text" class="form-control" id="notes">
+                    </div>
+
+                    <div class="form-group form-row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="throatScreenRemoved" value="throatScreenRemoved">
+                            <label class="form-check-label" for="throatScreenRemoved">Throat screen removed</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="hemostasis" value="hemostasis">
+                            <label class="form-check-label" for="hemostasis">Hemostasis</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="oralGauze" value="oralGauze">
+                            <label class="form-check-label" for="oralGauze">Oral gauze packs placed</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="imaging" value="imaging">
+                            <label class="form-check-label" for="imaging">Imaging taken and reviewed</label>
+
+                            <label for="notes" style="margin-right:5px">Reviewer's Initials</label>
+                            <input type="text" class="form-control" id="initials">
+                        </div>
+                    </div>
+
+                    <h6>RX: </h6>
+                    <div class="form-row">
+                        <div class="col form-group rx-col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="ibuprofen" value="ibuprofen">
+                                <label class="form-check-label" for="ibuprofen">Ibuprofen</label>
+                                <div class="form-check form-check-inline">
+                                    <!-- &nbsp; -->
+                                    <input class="form-check-input" type="checkbox" id="ibuprofen400" value="400">
+                                    <label class="form-check-label" for="ibuprofen400">400</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <!-- &nbsp; -->
+                                    <input class="form-check-input" type="checkbox" id="ibuprofen600" value="600">
+                                    <label class="form-check-label" for="ibuprofen600">600</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <!-- &nbsp; -->
+                                    <input class="form-check-input" type="checkbox" id="ibuprofen800" value="800">
+                                    <label class="form-check-label" for="ibuprofen800">800</label>
+                                </div>
+
+                                <label> mg po q8h, # &nbsp;</label>
+                                <input type="text" class="form-control col-sm-3" id="ibuprofenAmt">
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="peridex" value="peridex">
+                                <label class="form-check-label" for="peridex">Peridex, swish and spit 15ml bid: &nbsp;</label>
+                                <div class="form-check form-check-inline">
+                                    &nbsp;
+                                    <input class="form-check-input" type="checkbox" id="oneBtl" value="one">
+                                    <label class="form-check-label" for="oneBtl">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="twoBtl" value="two">
+                                    <label class="form-check-label" for="twoBtl">2</label>
+                                </div>
+                                <div>btl(s)</div>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="norco" value="norco">
+                                <label class="form-check-label" for="norco">Norco 5/325mg po 1 tab q4-6h prn pain, # &nbsp;</label>
+                                <input type="text" class="form-control col-sm-3" id="norcoAmt">
+                            </div>
+                        </div>
+
+                        <div class="col form-group rx-col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="tylenol500" value="tylenol500">
+                                <label class="form-check-label" for="tylenol500">Tylenol 500mg 2 tabs po q8h #&nbsp;</label>
+                                <input type="text" class="form-control col-sm-2" id="tylenol500Amt">
+                                <small> (alternate q4h with Motrin)</small>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="tylenol325" value="tylenol325">
+                                <label class="form-check-label" for="tylenol325">Tylenol 325mg 2 tabs po q6h #&nbsp;</label>
+                                <input type="text" class="form-control col-sm-2" id="tylenol325Amt">
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="oxycodone" value="oxycodone">
+                                <label class="form-check-label" for="oxycodone">Oxycodone 5mg take: &nbsp;</label>
+                                
+                                <div class="form-check form-check-inline">
+                                    &nbsp;
+                                    <input class="form-check-input" type="checkbox" id="oneTabOxycodone" value="one">
+                                    <label class="form-check-label" for="oneBtl">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="twoTabOxycodone" value="two">
+                                    <label class="form-check-label" for="twoBtl">2</label>
+                                </div>
+                                <div>tab(s) po q4h prn pain, # </div>
+                                <input type="text" class="form-control col-sm-3" id="oxycodoneAmt">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- RX Other -->
+                    <div class="form-group form-row-inline">
+                        <label for="notes">Other:</label>
+                        <input type="text" class="form-control" id="rxOther">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="postopInstructions" value="postopInstructions">
+                            <label class="form-check-label" for="postopInstructions">Post-op instructions reviewed w/escort/patient</label>
+                        </div>
+
+                        <div class="form-group form-group-inline">
+                            <label for="fu">F/U: &nbsp;</label>
+                            <input type="text" class="form-control" id="fu">
+                        </div>
+                    </div>
+
+                    <!-- special instructions -->
+                    <div class="form-group form-row-inline">
+                        <label for="notes">Special Instructions:</label>
+                        <input type="text" class="form-control" id="specialInstructions">
+                    </div>
+
+                    <!-- signature -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="resident">Resident</label>
+                            <input name="resident" type="text" class="form-control" list="residentList" id="resident">
+                            <datalist id="residentList">
+                                <!-- options are added in index.js -->
+                            </datalist>
+                        </div>
+    
+                        <div class="form-group col">
+                            <label for="staff">Staff</label>
+                            <input name="staff" type="text" class="form-control" list="staffList" id="staff">
+                            <datalist id="staffList">
+                                <!-- options are added in index.js -->
+                            </datalist>
+                        </div>
+                    </div>
+
+                    <!-- patient information -->
+                    <div class="form-group">
+                        <label for="patientInfo">Patient Information:</label>
+                        <textarea type="text" class="form-control" row="10" id="patientInfo"></textarea>
+                    </div>                    
+
+                    <!-- Submit button -->
+                    <!-- <div class="form-group">
+                        <button class="btn btn-primary " name="submit" type="submit">Generate Summary</button>
+                    </div> -->
+                </form>
+                <!-- Form code ends --> 
+                <div class="form-group">
+                    <button class="btn btn-primary " name="submit" id="generateBtn">Generate Summary</button>
+                </div>
+
+                <div class="form-group green-border-focus">
+                    <label for="summary">Summary generated below. You can edit the summary as needed.</label>
+                    <textarea class="form-control" id="summary" rows="15"></textarea>
+                </div>
+            </div>
+
+	</body>
+</html>
